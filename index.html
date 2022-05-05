@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+   
+    <title>شرکت خلاق آریامن گیمز</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Articles-Badges.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/aframe.min.js"></script>
+    
+    <script src="assets/aframe-ar.js"></script>
+
+    <script src="assets/gesture-detector.js"></script>
+    
+    <script src="assets/gesture-handler.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand fixed-top bg-dark text-center py-3" style="border-radius: 0px;border-bottom-right-radius: 30px;border-bottom-left-radius: 33px;">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"></a>
+            <h1 class="text-center text-white">شرکت خلاق آریامن گیمز</h1><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse flex-grow-0 order-md-first" id="navcol-1">
+                <ul class="navbar-nav me-auto"></ul>
+                <div class="d-md-none my-2"></div>
+            </div>
+            <div class="d-none d-md-block" style="border-style: solid;"></div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-dark navbar-expand fixed-bottom bg-dark text-center py-3">
+        <div class="container"><button class="btn btn-light me-2" type="button" onclick="Nextbut();" style="color: var(--bs-body-color);border-top-color: var(--bs-blue);font-size: 13px;width: 80px;height: 34px;font-weight: bold;border-top-left-radius: 8px;border-top-right-radius: 8px;border-bottom-right-radius: 8px;border-bottom-left-radius: 8px;">مدل قبلی</button><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-6"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><a class="btn btn-primary" role="button" href="info.html">درباره ما</a>
+            <div class="collapse navbar-collapse flex-grow-0 order-md-first" id="navcol-6">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                </ul><a class="btn btn-light me-2" role="button" onclick="prebut();" style="background: rgb(255,255,255);border-radius: 0;border-top-left-radius: 8px;border-top-right-radius: 8px;border-bottom-right-radius: 8px;border-bottom-left-radius: 8px;width: 80px;height: 34px;font-size: 13px;font-weight: bold;">مدل بعدی</a>
+            </div>
+        </div>
+    </nav>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src="assets/js/Simple-Slider.js"></script>
+
+    <a-scene
+    vr-mode-ui="enabled: false;"
+    loading-screen="enabled: false;"
+    renderer="logarithmicDepthBuffer: true;"
+    arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+    id="scene"
+    embedded
+    gesture-detector
+>
+    <a-assets>
+        <a-asset-item
+            id="animated-asset1"
+            src="assets/asset1.glb"
+        ></a-asset-item>
+    </a-assets>
+   
+
+    <a-marker
+        id="animated-marker"
+        type="pattern"
+        preset="custom"
+        url="assets/marker.patt"
+        raycaster="objects: .clickable"
+        emitevents="true"
+        cursor="fuse: false; rayOrigin: mouse;"
+        id="markerA"
+    >
+        <a-entity
+            id="bowser-model"
+            scale="0.6414686211485089 0.6414686211485089 0.6414686211485089"
+            animation-mixer="loop: repeat"
+            gltf-model="#animated-asset1"
+            class="clickable"
+            gesture-handler
+        ></a-entity>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+</a-scene>
+
+<script>
+    var adad = 1 ;
+   
+    function Nextbut() {
+        adad ++;
+        if(adad > 3){
+            adad = 1;
+        }
+        if(adad == 1){
+            document.getElementById("bowser-model").setAttribute('gltf-model', 'assets/asset1.glb');
+        }
+        else if(adad == 2){
+            document.getElementById("bowser-model").setAttribute('gltf-model', 'assets/asset2.glb');
+        }
+        else if(adad == 3){
+            document.getElementById("bowser-model").setAttribute('gltf-model', 'assets/asset3.glb');
+        }
+     
+       
+        
+    }
+    function prebut() {
+        adad --;
+        if(adad < 1){
+            adad = 3;
+        }
+        if(adad == 1){
+            document.getElementById("bowser-model").setAttribute('gltf-model', 'assets/asset1.glb');
+        }
+        else if(adad == 2){
+            document.getElementById("bowser-model").setAttribute('gltf-model', 'assets/asset2.glb');
+        }
+        else if(adad == 3){
+            document.getElementById("bowser-model").setAttribute('gltf-model', 'assets/asset3.glb');
+        }
+     
+        
+    }
+ </script>
+
+
+
+
+</body>
+
+</html>
