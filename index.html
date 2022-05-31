@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/coolbutton.css">
     <script src="assets/aframe.min.js"></script>
     
     <script src="assets/aframe-ar.js"></script>
@@ -23,7 +22,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand fixed-top bg-dark text-center py-3" style="border-radius: 0px;border-bottom-right-radius: 0px;border-bottom-left-radius: 0px;">
+    <nav class="navbar navbar-dark navbar-expand fixed-top bg-dark text-center py-3" style="border-radius: 0px;border-bottom-right-radius: 30px;border-bottom-left-radius: 33px;">
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"></a>
             <h1 class="text-center text-white">شرکت خلاق آریامن گیمز</h1><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse flex-grow-0 order-md-first" id="navcol-1">
@@ -34,27 +33,13 @@
         </div>
     </nav>
     <nav class="navbar navbar-dark navbar-expand fixed-bottom bg-dark text-center py-3">
-        <div class="container">
-  
-    <a onclick="Nextbut();" class="animated-button2">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  مدل قبلی</a>
-  <a href="info.html" class="animated-button1">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  درباره ما</a>
-    <a onclick="prebut();" class="animated-button2">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  مدل بعدی</a>
-          
+        <div class="container"><button class="btn btn-light me-2" type="button" onclick="Nextbut();" style="color: var(--bs-body-color);border-top-color: var(--bs-blue);font-size: 13px;width: 80px;height: 34px;font-weight: bold;border-top-left-radius: 8px;border-top-right-radius: 8px;border-bottom-right-radius: 8px;border-bottom-left-radius: 8px;">مدل قبلی</button><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-6"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><a class="btn btn-primary" role="button" href="info.html">درباره ما</a>
+            <div class="collapse navbar-collapse flex-grow-0 order-md-first" id="navcol-6">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                </ul><a class="btn btn-light me-2" role="button" onclick="prebut();" style="background: rgb(255,255,255);border-radius: 0;border-top-left-radius: 8px;border-top-right-radius: 8px;border-bottom-right-radius: 8px;border-bottom-left-radius: 8px;width: 80px;height: 34px;font-size: 13px;font-weight: bold;">مدل بعدی</a>
+            </div>
         </div>
     </nav>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
