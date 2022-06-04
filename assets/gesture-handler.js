@@ -18,10 +18,14 @@ AFRAME.registerComponent('gesture-handler', {
 
         this.el.sceneEl.addEventListener('markerFound', (e) => {
             this.isVisible = true;
+            console.log("sjvpvpejvpejvjpevjp");
+            document.getElementById("mat").innerHTML = "vistmarker";
+            
         });
 
         this.el.sceneEl.addEventListener('markerLost', (e) => {
             this.isVisible = false;
+            document.getElementById("mat").innerHTML = "novistmarker";
         });
     },
 
