@@ -23,7 +23,16 @@
 
     <script src="assets/min-gesture-handler.js"></script>
    
-    
+    <script>
+  AFRAME.registerComponent('markerhandler', {
+    init: function () {
+      this.el.sceneEl.addEventListener('markerFound', () => {
+        // redirect to custom URL e.g. google.com
+        window.location = 'https://www.google.com/';
+      })
+    }
+  });
+</script>
 </head>
 
 <body>
