@@ -1,5 +1,15 @@
 var adad = 1 ;
 console.log("grojklkjdfbnekojgnbnfkekfjgnfmellfgkm");
+  AFRAME.registerComponent('markerhandler', {
+    init: function () {
+      this.el.sceneEl.addEventListener('markerFound', () => {
+        // redirect to custom URL e.g. google.com
+        window.location = 'https://www.google.com/';
+         console.log(markerfond);
+          document.getElementById("mat").innerHTML = "Changed text!";
+      })
+    }
+  });
 function Nextbut() {
     adad ++;
     if(adad > 10){
